@@ -1,0 +1,4 @@
+resultado = 10 + 5 * 2
+media = (10 + 5) * 2
+print resultado
+print media
