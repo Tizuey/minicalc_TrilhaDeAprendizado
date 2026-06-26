@@ -56,14 +56,23 @@ def main():
 
         gerador = Codegen()
         codigo_python = gerador.gerar(ast)
-
-        print("\n=== CÓDIGO PYTHON GERADO ===")
-        print(codigo_python)
-        print("============================\n")
-
+        
+        
+        print("1. O compilador leu o seguinte código original:")
+        print("-" * 55)
+        print(codigo_fonte.strip())
+        print("-" * 55)
+        
+        print("\n2. A AST organizou a precedência e gerou este Python:")
+        print("-" * 55)
+        print(codigo_python.strip())
+        print("-" * 55)
+        
+        print("\n3. RESULTADO DA EXECUÇÃO (Cálculos Processados):")
+        print("-" * 55)
         # Execução direta do código gerado para validação
-        print("=== EXECUTANDO O CÓDIGO GERADO ===")
         exec(codigo_python)
+        print("="*55 + "\n")
 
     except Exception as e:
         # Captura qualquer erro durante as fases do compilador
